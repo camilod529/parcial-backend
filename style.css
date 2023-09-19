@@ -16,6 +16,7 @@ body {
     width: 100%;
     display: flexbox;
     align-items: center;  
+
 }
 .second-navbar :hover{
     color: black;
@@ -49,4 +50,45 @@ padding-top:  8%;
     max-height: 90%;
 
     align-items: center;
+}
+.contenido{
+    margin-left: 15%;
+    margin-right: 15%;
+    align-items: center;
+    padding-top: 15%;
+    color:black;
+    display: flexbox;
+    align-items: center;
+
+}
+.form{
+    align-content: center;
+}
+.Calcular{
+    background-color: rgba(245, 55, 55, 0.897);
+    color: aliceblue;
+    padding-top: 5px;
+    padding-bottom:5px;
+    width:15%;
+    align-items: center;
+    margin-top: 15px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.NumberText{
+    color: black;
+    text-align: center;
+    font-size: large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 5% ;
+
+
+}
+
+.br{
+    margin-top: 10%;
 }
