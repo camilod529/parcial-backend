@@ -13,41 +13,32 @@
         <br>
         <input type="submit" value="Enviar">
     </form>
-    <?php         
-        echo '<h3> Paso 1: Entero leído <h3>';
+    <?php  
         $digits=[];
-        $number = $_GET['celular'];        
-
-        for ($i = 0; $i < strlen($number); $i++) {
-            $digits[] = $number[$i];
-        }
-        print_r($number);
-
-        echo '<h3> Paso 2: Sumando 7 <h3>';
-        for ($i = 0; $i < count($digits); $i++) {
-            $digits[$i] = $number[$i] + 7;
-        }
-        //$paso2_print = implode($digits);
-        foreach($digits as $value){
-            echo $value.' ';
-        }
-        
-
-        echo '<h3> Paso 3: Digito % 10 <h3>';
+        $added=[];
         $mod=[];
-        for ($i = 0; $i < count($digits); $i++) {
-            $mod[] = $digits[$i] % 10;
-        }
-        echo implode($mod);
-
-        echo '<h3> Paso 4: Shuffle<h3>'; 
         $final=[];
+        $number = $_GET['celular'];  
+            
+        for ($i = 0; $i < strlen($number); $i++) {
+            $digits[$i] = $number[$i];
+            $added[$i] = $digits[$i] + 7;
+            $mod[$i] = $added[$i] % 10;
+        } 
+
         $final[0] = $mod[2];
         $final[1] = $mod[3];
         $final[2] = $mod[0];
         $final[3] = $mod[1];  
-        
-        echo implode($final);
+
+        echo '<h3> Paso 1: Entero leído <h3>'.$number;
+        echo '<h3> Paso 2: Sumando 7 <h3>';
+        foreach($added as $value){
+            echo $value.' ';
+        }
+        echo '<h3> Paso 3: Digito % 10 <h3>'.implode($mod);
+
+        echo '<h3> Paso 4: Shuffle<h3>'.implode($final);
         
         
     ?>
