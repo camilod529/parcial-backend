@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Parcial</title>
 </head>
-<div class="header"> 
+<div class="header">
     <div class="second-navbar">
         <form action="index.php" method="get">
             <ul>
@@ -17,23 +18,24 @@
         </form>
     </div>
 </div>
-<body>
-<div class="contenido">
-    <div class="party-assistance">
-        <h2>Asistencia de Personas</h2>
-        <form method="post">
-            <div class="form-group">
-                <label class="NumberText"for="edad_asistente">Edad Asistente:</label>
-                <input type="number" id="edad_asistente" name="edad_asistente">
-            </div>
-            <div class="form-group">
-                <button class="Calcular" type="submit" name="registrar">Registrar</button>
-            </div>
-        </form>    
-    </div>
 
-    <div id="resultado">
-        <?php
+<body>
+    <div class="contenido">
+        <div class="party-assistance">
+            <h2>Asistencia de Personas</h2>
+            <form method="post">
+                <div class="form-group">
+                    <label class="NumberText" for="edad_asistente">Edad Asistente:</label>
+                    <input type="number" id="edad_asistente" name="edad_asistente">
+                </div>
+                <div class="form-group">
+                    <button class="Calcular" type="submit" name="registrar">Registrar</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="resultado">
+            <?php
         session_start();
 
         if (!isset($_SESSION['masjoven'])) {
@@ -65,7 +67,8 @@
             }
         }
         ?>
+        </div>
     </div>
-</div>
 </body>
+
 </html>
