@@ -12,7 +12,7 @@
         <form action="index.php" method="get">
             <ul>
                 <li><a href="seccion1.php">Cifrando Digitos</a></li>
-                <li><a href="seccion2.php">Fiesta Bucaramanga</a></li>
+                <li><a href="seccion_2.php">Fiesta Bucaramanga</a></li>
                 <li><a href="seccion4.php">Primos que inician por 1</a></li>
                 <li><a href="seccion6.php">Numero Amigos</a></li>
         </form>
