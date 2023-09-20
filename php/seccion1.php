@@ -22,7 +22,7 @@
 <body>
 
     <h1>Cifrando Dígitos<br></h1>
-    <form class="NumberText" action="seccion1.php" method="get">
+    <form class="NumberText" action="seccion1.php" method="post">
         Entero de 4 dígitos: <input type="text" name="celular" />
         <br>
         <input class="Calcular" type="submit" value="Enviar">
@@ -30,12 +30,12 @@
 
 
     <?php
-    if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $digits = [];
         $added = [];
         $mod = [];
         $final = [];
-        $number = $_GET['celular'];
+        $number = $_POST['celular'];
 
         for ($i = 0; $i < strlen($number); $i++) {
             $digits[$i] = $number[$i];
