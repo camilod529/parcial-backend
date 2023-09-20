@@ -3,17 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cifrando Dígitos</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Parcial</title>
 </head>
+<div class="header"> 
+    <div class="second-navbar">
+        <form action="index.php" method="get">
+            <ul>
+                <li><a href="seccion1.php">Cifrando Digitos</a></li>
+                <li><a href="seccion2.php">Fiesta Bucaramanga</a></li>
+                <li><a href="seccion4.php">Primos que inician por 1</a></li>
+                <li><a href="seccion6.php">Numero Amigos</a></li>
+        </form>
+    </div>
+</div>
 <body>
     
     <h1>Cifrando Dígitos<br></h1>
-    <form action="seccion1.php" method="get">
+    <form class ="NumberText"action="seccion1.php" method="get">
         Entero de 4 dígitos: <input type="text" name="celular"/>
         <br>
-        <input type="submit" value="Enviar">
+        <input class="Calcular" type="submit" value="Enviar">
     </form>
-    <?php  
+
+
+        <?php
+    if ($_SERVER['REQUEST_METHOD'] =='GET'){
         $digits=[];
         $added=[];
         $mod=[];
@@ -33,14 +48,14 @@
 
         echo '<h3> Paso 1: Entero leído <h3>'.$number;
         echo '<h3> Paso 2: Sumando 7 <h3>';
+
         foreach($added as $value){
             echo $value.' ';
         }
         echo '<h3> Paso 3: Digito % 10 <h3>'.implode($mod);
 
         echo '<h3> Paso 4: Shuffle<h3>'.implode($final);
-        
-        
+    }
     ?>
 </body>
 </html>
